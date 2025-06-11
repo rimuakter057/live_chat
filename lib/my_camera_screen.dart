@@ -56,17 +56,23 @@ class _MyCameraScreenState extends State<MyCameraScreen> {
     }
 
     bool isFrontCamera = cameras![selectedCameraIndex].lensDirection == CameraLensDirection.front;
-
     return Stack(
       children: [
-        SizedBox.expand(
-          child: isFrontCamera
-              ? Transform(
-            alignment: Alignment.center,
-            transform: Matrix4.rotationY(math.pi),
-            child: CameraPreview(_controller!),
-          )
-              : CameraPreview(_controller!),
+        Positioned.fill(
+          child: FittedBox(
+            fit: BoxFit.cover,
+            child: SizedBox(
+              width: _controller!.value.previewSize!.height,
+              height: _controller!.value.previewSize!.width,
+              child: isFrontCamera
+                  ? Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.rotationY(math.pi),
+                child: CameraPreview(_controller!),
+              )
+                  : CameraPreview(_controller!),
+            ),
+          ),
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -80,5 +86,6 @@ class _MyCameraScreenState extends State<MyCameraScreen> {
         ),
       ],
     );
+
   }
 }
