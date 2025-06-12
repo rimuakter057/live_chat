@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:live_chat/permission_handelar.dart';
-import 'home_screen.dart';
+
+import 'onboarding/on_boarding_screen.dart';
 
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await PermissionHelper.requestCameraAndMicPermissions();
+void main() {
   runApp(const MyApp());
 }
 
@@ -15,9 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
+      title: 'Cinephile',
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      theme: ThemeData(fontFamily: 'Roboto'),
+      home: const OnboardingScreen(),
     );
   }
 }
