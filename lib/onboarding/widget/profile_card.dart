@@ -9,8 +9,8 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 120,
-      padding: const EdgeInsets.all(12),
+      width: 80,
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -20,11 +20,13 @@ class ProfileCard extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 28,
-            backgroundColor: AppColors.primary,
-            child: const Icon(Icons.person, color: Colors.white),
+            backgroundColor: Colors.red,
+            child: const Icon(Icons.favorite,color: Colors.white),
           ),
           const SizedBox(height: 8),
-          const Icon(Icons.favorite, color: Colors.red),
+          const Icon(Icons.book_online, color: AppColors.primary),
+          const SizedBox(height: 8),
+          const Icon(Icons.shopping_bag, color: AppColors.primary),
         ],
       ),
     );
