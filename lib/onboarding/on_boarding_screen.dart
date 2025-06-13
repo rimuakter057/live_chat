@@ -59,8 +59,10 @@ class OnboardingScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
             Image.asset("assets/images/man.png",
-            height: 280.h,
-              width: 120.w,
+            height: 250.h,
+              width: 140.w,
+              fit: BoxFit.fitHeight, // অথবা BoxFit.fill
+              alignment: Alignment.bottomCenter, // 🔥 গুরুত্বপূর্ণ
             ),
                         UserMessageCard(
                           icon: Icons.message,
