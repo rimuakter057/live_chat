@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_color.dart';
 
@@ -15,15 +16,15 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+        padding:  EdgeInsets.symmetric(horizontal: 32.w, vertical: 16.h),
         decoration: BoxDecoration(
           color: AppColors.primary,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.r),
         ),
         child: Center(
           child: Text(
             text,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
+            style:  TextStyle(color: Colors.white, fontSize: 18.sp),
           ),
         ),
       ),
