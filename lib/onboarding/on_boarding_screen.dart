@@ -61,8 +61,8 @@ class OnboardingScreen extends StatelessWidget {
             Image.asset("assets/images/man.png",
             height: 250.h,
               width: 140.w,
-              fit: BoxFit.fitHeight, // অথবা BoxFit.fill
-              alignment: Alignment.bottomCenter, // 🔥 গুরুত্বপূর্ণ
+              fit: BoxFit.fitHeight,
+              alignment: Alignment.bottomCenter,
             ),
                         UserMessageCard(
                           icon: Icons.message,
