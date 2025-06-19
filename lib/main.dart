@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'onboarding/on_boarding_screen.dart';
+import 'onboarding/get_started/on_boarding_screen.dart';
+import 'onboarding/skip/skip_screen.dart';
 
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Live Chat',
-           home:OnboardingScreen(),
+           home:SkipScreen(),
         );
       },
     );

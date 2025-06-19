@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../utils/app_color.dart';
+import '../../../utils/app_color.dart';
+
 
 
 class ProfileCard extends StatelessWidget {
@@ -25,9 +26,9 @@ class ProfileCard extends StatelessWidget {
             child: const Icon(Icons.favorite,color: Colors.white),
           ),
            SizedBox(height: 8.h),
-          const Icon(Icons.book_online, color: AppColors.primary),
+          Icon(Icons.book_online, color: AppColors.primary),
            SizedBox(height: 8.h),
-          const Icon(Icons.shopping_bag, color: AppColors.primary),
+          Icon(Icons.shopping_bag, color: AppColors.primary),
         ],
       ),
     );

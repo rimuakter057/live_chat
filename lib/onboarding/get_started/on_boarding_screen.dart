@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:live_chat/onboarding/widget/profile_card.dart';
-import 'package:live_chat/onboarding/widget/row_line_circle.dart';
-import 'package:live_chat/onboarding/widget/user_message_card.dart';
-import '../utils/app_color.dart';
-import 'package:live_chat/onboarding/widget/custom_button.dart';
+import 'package:live_chat/onboarding/get_started/widget/custom_button.dart';
+import 'package:live_chat/onboarding/get_started/widget/row_line_circle.dart';
+import 'package:live_chat/onboarding/get_started/widget/user_message_card.dart';
+
+import '../../utils/app_color.dart';
+
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
