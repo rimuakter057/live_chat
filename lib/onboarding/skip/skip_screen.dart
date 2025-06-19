@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:live_chat/live_camera/my_camera_screen.dart';
 import 'package:live_chat/onboarding/skip/widget/container_image_widget.dart';
 import 'package:live_chat/onboarding/skip/widget/gift_box_widget.dart';
 import 'package:live_chat/utils/app_color.dart';
@@ -49,29 +50,39 @@ class _SkipScreenState extends State<SkipScreen> {
             ),
             SizedBox(height: 20.h,),
             //row image container
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    ContainerImageWidget(image: 'assets/images/girl.jfif',),
-                    Row(
-                      children: [
-                      Icon(Icons.flag,color: Colors.red,),
-                      SizedBox(width: 15.w,),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 8.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                        SizedBox(
+              height: 180.h,
+              width: 90.w,
+              child: MyCameraScreen(),
+                        ),
+                      Row(
+                        children: [
+                        Icon(Icons.flag,color: Colors.red,),
+                        SizedBox(width: 15.w,),
+                        Icon(Icons.print,color: Colors.white,),
+                      ],),
+                    ],
+                  ),
+                  Icon(Icons.favorite,color: AppColors.white,size: 100.sp,),
+                  Column(
+                    children: [
+                      // container other user live camera
+                      ContainerImageWidget(image: 'assets/images/girl1.jfif',),
                       Icon(Icons.print,color: Colors.white,),
-                    ],),
-                  ],
-                ),
-                Icon(Icons.favorite,color: AppColors.white,size: 100.sp,),
-                Column(
-                  children: [
-                    ContainerImageWidget(image: 'assets/images/girl1.jfif',),
-                    Icon(Icons.print,color: Colors.white,),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
+
+
               SizedBox(height: 80.h,),
             //text column
             Column(

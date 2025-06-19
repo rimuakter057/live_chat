@@ -64,28 +64,39 @@ class _MyCameraScreenState extends State<MyCameraScreen> {
             child: SizedBox(
               width: _controller!.value.previewSize!.height,
               height: _controller!.value.previewSize!.width,
-              child: isFrontCamera
-                  ? Transform(
-                alignment: Alignment.center,
-                transform: Matrix4.rotationY(math.pi),
-                child: CameraPreview(_controller!),
-              )
-                  : CameraPreview(_controller!),
+
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: isFrontCamera
+                    ? Transform(
+                  alignment: Alignment.center,
+                  transform: Matrix4.rotationY(math.pi),
+                  child: CameraPreview(_controller!),
+                )
+                    : CameraPreview(_controller!),
+              ),
             ),
           ),
         ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 24.0),
-            child: FloatingActionButton(
-              onPressed: _switchCamera,
-              child: const Icon(Icons.cameraswitch),
+
+        Positioned(
+          bottom: 8,
+          right: 8,
+          child: GestureDetector(
+            onTap: _switchCamera,
+            child: Container(
+              padding: EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.black,
+              ),
+              child: Icon(Icons.cameraswitch, color: Colors.white, size: 20),
             ),
           ),
         ),
       ],
     );
+
 
   }
 }
