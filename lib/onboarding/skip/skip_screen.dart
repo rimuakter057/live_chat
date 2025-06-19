@@ -49,12 +49,13 @@ class _SkipScreenState extends State<SkipScreen> {
               ],
             ),
             SizedBox(height: 20.h,),
-            //row image container
+            //live camera
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: 8.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  //my live camera
                   Column(
                     children: [
                         SizedBox(
@@ -73,7 +74,7 @@ class _SkipScreenState extends State<SkipScreen> {
                   Icon(Icons.favorite,color: AppColors.white,size: 100.sp,),
                   Column(
                     children: [
-                      // container other user live camera
+                      // other user live camera
                       ContainerImageWidget(image: 'assets/images/girl1.jfif',),
                       Icon(Icons.print,color: Colors.white,),
                     ],
