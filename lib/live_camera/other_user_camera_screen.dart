@@ -20,9 +20,9 @@ class _OtherUserCameraScreenState extends State<OtherUserCameraScreen> {
   Future<void> _initCamera() async {
     await _remoteRenderer.initialize();
 
-    // এটা fixed demo stream হিসেবে নিজের ক্যামেরা চালু করবে, but pretend it's someone else
+
     final stream = await navigator.mediaDevices.getUserMedia({
-      'video': {'facingMode': 'environment'}, // 🔁 back camera use
+      'video': {'facingMode': 'environment'},
       'audio': false,
     });
 

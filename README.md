@@ -2,10 +2,16 @@
 
 ## 🖼 App Screenshots
 
-### 🔹 Row 1
 <p float="left">
+ <img src="assets/screenshots/get_started.jfif" width="200"/>
   <img src="assets/screenshots/back_camera.jfif" width="200"/>
   <img src="assets/screenshots/font camera.jfif" width="200"/>
+</p>
+<p float="left">
+ <img src="assets/screenshots/live_chat.jfif" width="200"/>
+  <img src="assets/screenshots/full_font_camera.jfif" width="200"/>
+  <img src="assets/screenshots/full_back_camera.jfif" width="200"/>
+  <img src="assets/screenshots/other_camera.jfif" width="200"/>
 </p>
 
 📱 Live Camera App (Front & Back)

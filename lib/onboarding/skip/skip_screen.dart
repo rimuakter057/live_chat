@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:live_chat/live_camera/home_screen.dart';
 import 'package:live_chat/live_camera/my_camera_screen.dart';
 import 'package:live_chat/onboarding/skip/widget/container_image_widget.dart';
 import 'package:live_chat/onboarding/skip/widget/gift_box_widget.dart';
@@ -109,7 +110,9 @@ class _SkipScreenState extends State<SkipScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(),
-                    TextButton(onPressed: (){},
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                    },
                       child:Text(
                       "SKIP >",
                       style: TextStyle(
