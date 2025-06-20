@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
+import 'package:live_chat/onboarding/skip/skip_screen.dart';
 import 'onboarding/get_started/on_boarding_screen.dart';
-import 'onboarding/skip/skip_screen.dart';
-
-
 void main() {
   runApp(const MyApp());
 }

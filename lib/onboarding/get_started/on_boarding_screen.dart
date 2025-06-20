@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:live_chat/onboarding/get_started/widget/custom_button.dart';
 import 'package:live_chat/onboarding/get_started/widget/row_line_circle.dart';
 import 'package:live_chat/onboarding/get_started/widget/user_message_card.dart';
+import 'package:live_chat/onboarding/skip/skip_screen.dart';
 
 import '../../utils/app_color.dart';
 
@@ -198,7 +199,7 @@ class OnboardingScreen extends StatelessWidget {
               child: CustomButton(
                 text: 'Get started',
                 onTap: () {
-                  // Navigate or action
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SkipScreen()));
                 },
               ),
             ),
